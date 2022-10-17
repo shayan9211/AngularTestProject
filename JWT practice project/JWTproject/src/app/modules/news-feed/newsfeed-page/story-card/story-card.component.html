@@ -1,0 +1,61 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="profile-pix"></div>
+    <div class="header-container">
+      <div class="profile-header">
+        <mat-card-title
+          [ngClass]="{ active: checkUser() }"
+          (click)="onProfile(story.publisherName)"
+        >
+          {{ story.publisherName }}
+        </mat-card-title>
+        <mat-card-subtitle>{{
+          story.publishedTime | date: "short"
+        }}</mat-card-subtitle>
+      </div>
+      <button
+        mat-icon-button
+        *ngIf="checkUser()"
+        aria-label="delete button"
+        color="warn"
+        (click)="deletePost(story._id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="content">{{ story.content.text }}</p>
+    <img
+      mat-card-image
+      *ngIf="story?.content?.image?.includes('https')"
+      class="content-image"
+      [src]="story.content.image"
+      alt="post image"
+      onerror="this.onerror=null;this.src='assets/images/error_404.png';"
+    />
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="comments">
+      <button
+        mat-icon-button
+        class="comment-button"
+        color="primary"
+        aria-label="comment icon"
+        (click)="openDialog(story)"
+      >
+        <mat-icon>comment</mat-icon>
+      </button>
+      <div>{{ story.comment.length }}</div>
+    </div>
+    <button
+      mat-icon-button
+      class="like-button"
+      [ngClass]="{ liked: toggleLike(story._id) }"
+      aria-label="favorite button"
+      (click)="like(story._id)"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

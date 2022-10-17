@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+  min-width: 480px;
+  background-color: #edf1f5;
+}
+
+mat-card {
+  width: 600px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.profile-pix {
+  background-image: url("src/assets/images/siamese.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 65px;
+  width: 65px;
+}
+
+.profile-header {
+  margin-top: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+#bio-textarea {
+  height: 70px;
+  padding-bottom: 0;
+  resize: none;
+}
+
+.userinfo-container {
+  display: flex;
+}
+
+#age-field {
+  width: 25%;
+  margin-right: 50px;
+}
+
+#gender-label {
+  padding-bottom: 10px;
+}
+
+.radio-container {
+  padding-bottom: 1.34375em;
+}
+
+mat-radio-button {
+  padding-right: 20px;
+}
+
+.password-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5em;
+}
+
+.password-container > mat-form-field {
+  width: 49%;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.button-container > button:hover {
+  transform: scale(1.1);
+}
+
+.post {
+  margin-right: 50px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-weight: bold;
+}

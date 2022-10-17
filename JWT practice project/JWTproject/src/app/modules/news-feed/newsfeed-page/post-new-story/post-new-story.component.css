@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+mat-card {
+  width: 600px;
+  padding: 16px;
+}
+
+.profile-pix {
+  background-image: url("src/assets/images/avatar_placeholder.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 65px;
+  width: 65px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin: 0 0 -15px -15px;
+}
+
+#post-textarea {
+  height: 75px;
+  resize: none;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 0 80px;
+}
+
+#post-btn {
+  margin-left: auto;
+}
